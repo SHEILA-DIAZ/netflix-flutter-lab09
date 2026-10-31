@@ -82,71 +82,7 @@ La búsqueda filtra por coincidencia parcial del título, sin distinguir mayúsc
 
 Se incluyen los TTF en assets/fonts y se declaran en pubspec.yaml. Proceden de Google Fonts y cada familia incluye su licencia SIL Open Font License. No requieren descargar fuentes al iniciar. cupertino_icons complementa las fuentes de iconos del framework; no sustituye las tres familias de texto.
 
-## Imágenes locales y en la nube
+## Autora
 
-`Image.asset()` carga assets/images/cosmos.jpg desde el paquete y funciona sin Internet. `Image.network()` descarga fotografías HTTPS de images.unsplash.com. loadingBuilder presenta un indicador; errorBuilder muestra la fotografía local y un icono de desconexión si falla la descarga.
-
-La foto local procede de https://images.unsplash.com/photo-1446776811953-b23d57bd21aa. Las demás URLs están en catalog_data.dart. Las imágenes remotas requieren conexión y disponibilidad del proveedor. No son carteles oficiales ni tienen persistencia offline garantizada.
-
-## Pruebas
-
-```sh
-flutter pub get
-dart format .
-flutter analyze
-flutter test
-flutter build web
-```
-
-Las cinco pruebas cubren:
-
-1. Abrir detalles desde Netflix, regresar y visualizar tarjetas.
-2. Agregar un favorito, consultarlo en Mi lista y quitarlo.
-3. Buscar orbita sin tilde y probar una consulta sin resultados.
-4. Desplazar inicio y listas en 320 × 640 sin errores de layout.
-5. Recorrer todas las vistas a 390 × 844, desplazar carruseles y comprobar que no hay errores de layout.
-
-Las pruebas no generan capturas. El entorno de pruebas bloquea HTTP y utiliza el respaldo local de las imágenes. Los resultados de verificación se incluyen más abajo.
-
-## Exposición y entrega
-
-Completar los integrantes del grupo antes de entregar. Ejecutar `python scripts/empaquetar.py` con Python 3 para regenerar labxy.zip con código, recursos, pruebas y documentación. El ZIP excluye cachés y configuración local. Subir ese archivo mediante Entregar tarea en Canvas. Si el profesor usa xy como número de laboratorio, ajustar el nombre según su indicación.
-
-## Integrantes
-
-Completar antes de entregar:
-
-- Integrante 1: ____________________
-- Integrante 2: ____________________
-- Integrante 3: ____________________
-
-## Guion de exposición
-
-1. Mostrar el inicio Netflix, su paleta y el banner.
-2. Desplazar Tendencias horizontalmente y recorrer Películas y Series.
-3. Bajar a Recomendadas: explicar ListView vertical, Card y ListTile.
-4. Abrir un título: explicar Navigator, argumentos y modelo Movie.
-5. Agregar a Mi lista, regresar y consultar el favorito; luego quitarlo. Explicar ChangeNotifier y ListenableBuilder.
-6. Abrir Buscar, escribir orbita y mostrar la coincidencia sin tilde. Probar una consulta sin resultados.
-7. Mostrar el Map de géneros, las listas, ThemeData, las tres fuentes y ambos tipos de imágenes en el código.
-8. Presentar las pruebas y sus resultados.
-
-## Resultados de verificación
-
-Revisión: 31 de octubre de 2026. Alcance: catálogo Netflix con cuatro pantallas (inicio, detalles, Mi lista y búsqueda).
-
-| Comprobación | Resultado |
-| --- | --- |
-| Dependencias | Resueltas con flutter pub get durante la implementación. |
-| dart format . | Correcto; sin cambios pendientes de formato. |
-| flutter analyze | No issues found. |
-| flutter test | All tests passed: cinco pruebas. |
-| flutter build web | Correcto: Built build/web. |
-
-Las pruebas comprueban apertura de detalles y regreso, tarjetas, agregar/consultar/quitar favoritos, búsqueda con normalización de tildes, estados vacíos y desplazamiento de las listas. También comprueban el inicio en 320 × 640 y un recorrido completo en 390 × 844.
-
-Las pruebas conservan el recorrido móvil y la comprobación de errores de layout, sin escribir imágenes. No se ha probado en un teléfono físico.
-
-El entregable se regenera con scripts/empaquetar.py. Antes de subir a Canvas, completar los integrantes y regenerar el ZIP.
-
+Sheila Diaz Rojas
 

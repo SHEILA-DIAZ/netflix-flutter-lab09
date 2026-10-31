@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "StreamHub · Chrome móvil",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome",
+      "toolArgs": ["--dart-define=DEMO_MOVIL=true"]
+    },
+    {
+      "name": "StreamHub · Dispositivo seleccionado",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}
